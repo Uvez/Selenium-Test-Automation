@@ -69,3 +69,74 @@
 2024-07-17 23:10:08,892 :INFO : verify_invalid_email_message :verify the invalid email message
 2024-07-17 23:10:08,945 :INFO : click_to_login_button :click on the login button
 2024-07-17 23:10:08,945 :INFO : click_to_login_button :click on the login button
+2024-07-17 23:45:32,638 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:45:35,221 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:45:35,338 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:45:35,420 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:45:35,487 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:45:45,509 :INFO : verify_menu_text :Verify the Menu text in the dashboard page
+2024-07-17 23:45:45,585 :INFO : click_on_name_text :Click on the Menu text in the dashboard page
+2024-07-17 23:45:48,349 :INFO : click_on_Logout_button :Click on the logout button in the menubar
+2024-07-17 23:46:09,625 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:46:09,625 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:46:12,601 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:46:12,601 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:46:12,691 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:46:12,691 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:46:12,780 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:46:12,780 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:46:12,861 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:46:12,861 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:46:22,863 :INFO : verify_Login_text :verify login text in the login page
+2024-07-17 23:46:22,898 :INFO : test_enter_empty_credentails_in_login :Login successful!
+2024-07-17 23:46:46,541 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:46:46,541 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:46:46,541 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:46:48,908 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:46:48,908 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:46:48,908 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:46:49,018 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:46:49,018 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:46:49,018 :INFO : enter_Email :Entered email address in the login page
+2024-07-17 23:46:49,113 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:46:49,113 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:46:49,113 :INFO : enter_Password :Entered password in the login page
+2024-07-17 23:46:49,174 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:46:49,174 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:46:49,174 :INFO : click_on_Continue_Button :click on the Continue button
+2024-07-17 23:46:59,175 :INFO : verify_error_text :verify error text in the login page
+2024-07-17 23:47:42,536 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:47:42,536 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:47:42,536 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:47:42,536 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:47:44,981 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:47:44,981 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:47:44,981 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:47:44,981 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:47:55,068 :INFO : click_on_forgot_link :click on the forgot link
+2024-07-17 23:47:55,070 :INFO : verify_page_title :verify the page title in the forgot page
+2024-07-17 23:47:55,175 :INFO : enter_Email_ID :enter the email address in the forgot page
+2024-07-17 23:47:55,239 :INFO : click_on_Continue_button :click on the continue button
+2024-07-17 23:48:05,240 :INFO : verify_confirm_message :verify the confirmation message in the forgot page
+2024-07-17 23:48:05,325 :INFO : click_to_login_button :click on the login button
+2024-07-17 23:48:27,618 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:48:27,618 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:48:27,618 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:48:27,618 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:48:27,618 :INFO : click_on_Menu_Button :click on the menu button in the home page
+2024-07-17 23:48:30,208 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:48:30,208 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:48:30,208 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:48:30,208 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:48:30,208 :INFO : click_on_Login_Button :click on the login button
+2024-07-17 23:48:40,284 :INFO : click_on_forgot_link :click on the forgot link
+2024-07-17 23:48:40,284 :INFO : click_on_forgot_link :click on the forgot link
+2024-07-17 23:48:40,292 :INFO : verify_page_title :verify the page title in the forgot page
+2024-07-17 23:48:40,292 :INFO : verify_page_title :verify the page title in the forgot page
+2024-07-17 23:48:40,404 :INFO : enter_Email_ID :enter the email address in the forgot page
+2024-07-17 23:48:40,404 :INFO : enter_Email_ID :enter the email address in the forgot page
+2024-07-17 23:48:40,460 :INFO : click_on_Continue_button :click on the continue button
+2024-07-17 23:48:40,460 :INFO : click_on_Continue_button :click on the continue button
+2024-07-17 23:48:50,472 :INFO : verify_invalid_email_message :verify the invalid email message
+2024-07-17 23:48:50,556 :INFO : click_to_login_button :click on the login button
+2024-07-17 23:48:50,556 :INFO : click_to_login_button :click on the login button

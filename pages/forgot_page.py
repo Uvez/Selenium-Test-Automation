@@ -14,6 +14,7 @@ class ForgotPage(BasePage):
     EmailText = (By.XPATH,"//input[@id='email-reset']")
     ContineBtn = (By.XPATH,"//button[@id='btn-reset']")
     SuccessText = (By.XPATH,"//h2[@class='headline uni-headline--2 page-title']")
+    confirmationText = (By.XPATH,"//p[@id='reset-confirmation-hudl-message']")
     LoginBtn = (By.XPATH,"//button[@id='nav-btn-page'] ")
     invalid_email_error = (By.XPATH,"//p[normalize-space()='Please enter a valid email address']")
 
@@ -36,6 +37,10 @@ class ForgotPage(BasePage):
     def verify_text_message(self):
         self.getLogger().info('verify the text message in the forgot page')
         return self.getText(self.SuccessText)
+    
+    def verify_confirm_message(self):
+        self.getLogger().info('verify the confirmation message in the forgot page')
+        return self.getText(self.confirmationText)
     
     def click_to_login_button(self):
         self.click(self.LoginBtn)

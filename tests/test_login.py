@@ -68,8 +68,8 @@ class Test_login(BaseTest,log):
               self.pages['forgot_page'].enter_Email_ID(username)
               self.pages['forgot_page'].click_on_Continue_button()
               time.sleep(10)
-              expected_success_message = self.json_reader.read_from_json()["validate_text_Message"]["verify_Page_title"]
-              assert_that(expected_success_message).is_equal_to(self.pages['forgot_page'].verify_text_message())
+              expected_success_message = self.json_reader.read_from_json()["validate_text_Message"]["verify_confirmation_message"]
+              assert_that(expected_success_message).is_equal_to(self.pages['forgot_page'].verify_confirm_message())
               self.pages['forgot_page'].click_to_login_button()
               self.pages['login_page'].click_on_Home_button()
 

@@ -6,7 +6,8 @@
         "verify_Page_title":"Check Your Email",
         "verify_Error_Message":"We don't recognize that email and/or password",
         "verify_Invalid_Message":"Please enter a valid email address",
-        "verify_dashboard_page_text": "Newcastle Jets FC"
+        "verify_dashboard_page_text": "Newcastle Jets FC",
+        "verify_confirmation_message":"If you have an account, a reset password link has been sent to your email."
     }
     
   
