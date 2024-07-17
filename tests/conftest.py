@@ -2,60 +2,63 @@ import re
 from pathlib import Path
 import pytest
 import os
+import allure
+from datetime import datetime
 from selenium import webdriver
-from pages.LoginPage import LoginPage
-from utilities.config_parser import ConfigParserIni
+from pages.home_page import HomePage
+from pages.login_page import LoginPage
+from pages.dashboard_page import DashBoardPage
+from pages.forgot_page import ForgotPage
+from utilities.config_parser import ConfigParser
+from globals import dir_global
+from utilities.log import log
 
 driver = None
 
-#WEB_URL ='https://www.hudl.com/'
-
-
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="chrome", help="browser that the automation will run in")
+    parser.addoption("--browser", action="store", default="chrome")
 
 @pytest.fixture(scope="session")
 # instantiates ini file parses object
 def prep_properties():
-    config_reader = ConfigParserIni("props.ini")
+    config_reader = ConfigParser("property.ini")
     return config_reader
 
+@pytest.fixture
+def pages():
+    home_page = HomePage(driver)
+    login_page = LoginPage(driver)
+    dashboard_page = DashBoardPage(driver)
+    forgot_page = ForgotPage(driver)
+    return locals()
 
-
-@pytest.fixture(scope="class")
+@pytest.fixture(autouse=True)
 def setup(prep_properties,request):
     global driver,base_url,browsername
-    #browser = request.config.option.browser
     base_url = prep_properties.config_section_dict("AUT")["base_url"]
     browsername = request.config.getoption("browser")
     if browsername == "chrome":
         driver = webdriver.Chrome()
-    elif browsername == "firefox":
-        #driver = webdriver.Firefox(executable_path=log.Path+"/resources/geckodriver")
+    if browsername == "firefox":
         driver = webdriver.Firefox()
     elif browsername =="edge":
         driver = webdriver.Edge()
-    
-
-    driver.get(base_url)
+    elif browsername =="chrome_headless":
+        parameters = webdriver.ChromeOptions()
+        parameters.add_argument("--headless")
+        driver = webdriver.Chrome(parameters)
+    else:
+         driver = webdriver.Chrome()
+    driver.implicitly_wait(5)
     driver.maximize_window()
+    driver.get(base_url)
     request.cls.driver = driver
     yield
-    driver.close()
+    driver.quit()
 
 
 
-
-
-##@fixture()
-##def browsername(request):
-    ##return request.config.getoption("--browsername")
-#def pytest_generate_tests(metafunc):
-#    option_value = metafunc.config.option.name
- #   if 'browsername' in metafunc.fixturenames and option_value is not None:
- #       metafunc.parametrize("browsername", [option_value])
-"""
-@pytest.hookimpl(hookwrapper=True)
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item):
 
     pytest_html = item.config.pluginmanager.getplugin('html')
@@ -67,26 +70,15 @@ def pytest_runtest_makereport(item):
         xfail = hasattr(report,'wasxfail')
         if(report.skipped and xfail) or (report.failed and not xfail):
             tc_name = report.nodeid.split("::")[-1]
-            file_name = log.PATH+"/reports/screenshots/"+tc_name + ".png"
+            file_name = dir_global.SCREENSHOTS_PATH+"/screenshots/"+tc_name + ".png"
             _capture_screenshot(file_name)
             if file_name:
-                html = '<div><img src="screenshots/%s.png" alt="screenshot" style="width:304px;height:228px;" ' \
-                       'onclick="window.open(this.src)" align="right"/></div>' % tc_name
-                extra.append(pytest_html.extras.html(html))
+                #html = '<div><img src="screenshots/%s.png" alt="screenshot" style="width:304px;height:228px;" ' \
+                       #'onclick="window.open(this.src)" align="right"/></div>' % file_name
+                extra.append(pytest_html.extras.image(file_name))
         report.extra = extra
-"""
-
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    # execute all other hooks to obtain the report object
-
-    outcome = yield
-    rep = outcome.get_result()
-
-    # set a report attribute for each phase of a call, which can
-    # be "setup", "call", "teardown"
-
-    setattr(item, "rep_" + rep.when, rep)
 
 def _capture_screenshot(name):
         driver.get_screenshot_as_file(name)
+
+
