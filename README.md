@@ -11,4 +11,4 @@ To run test file in pytest. Follow the below steps
 ## Test Reporting 📑
 
 Reports are stored in reports folders. 
-## reports\report.html
+`reports\report.html`
