@@ -5,7 +5,7 @@
 
 ## Running tests
 To run test file in pytest. Follow the below steps
-
+`navigate to the pytest project
 `py.test --html=reports/report.html --browser <<chrome\firefox\\ie\chrome_headless>>`
 
 ## Test Reporting 📑
