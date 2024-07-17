@@ -1,6 +1,6 @@
 
 ## Configuration ⚙️
-* Install python and install `requirements.txt` packages
+* Install python and install `requirements.txt` packages in python.
 * GIT Bash terminal (for Windows)
 
 ## Running tests
