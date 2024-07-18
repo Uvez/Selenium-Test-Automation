@@ -26,7 +26,6 @@ class Test_login(BaseTest,log):
               self.pages['dashboard_page'].click_on_name_text()
               self.pages['dashboard_page'].click_on_Logout_button()
 
-
        def test_enter_empty_credentails_in_login(self):
               username =''
               password=''
@@ -55,7 +54,6 @@ class Test_login(BaseTest,log):
               actual_text = self.pages['login_page'].verify_error_text()
               assert_that(expected_success_message).is_equal_to(actual_text)
               self.pages['login_page'].click_on_Home_button()
-
 
        def test_valid_forgot_password(self):
               username = self.config_reader.config_section_dict("AUT")["username"]

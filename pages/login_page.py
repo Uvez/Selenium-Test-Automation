@@ -16,13 +16,10 @@ class LoginPage(BasePage,log):
     errortext = (By.XPATH,"//p[@class='error-message uni-text uni-text--small uni-text--set-solid'][1]")
     home_button = (By.XPATH,"//span[@id='nav-btn-logo-hudl']//*[name()='svg']//*[name()='path'][1]")
     
-
     def enter_Email(self,emailvalue):
         self.sendKeys(self.email,emailvalue)
         self.getLogger().info('Entered email address in the login page')
             
-
-
     def enter_Password(self,passwordvalue):
         self.sendKeys(self.password,passwordvalue)
         self.getLogger().info('Entered password in the login page')

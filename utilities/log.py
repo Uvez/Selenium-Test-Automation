@@ -10,6 +10,7 @@ class log:
 
     ROOT_PATH = str(Path(__file__).parent.parent)
 
+    #creating a log
     def getLogger(self):
         loggerName = inspect.stack()[1][3]
         logger = logging.getLogger(loggerName)

@@ -13,17 +13,17 @@ from utilities.config_parser import ConfigParser
 from globals import dir_global
 from utilities.log import log
 
-driver = None
-
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
 
+#reading your property file
 @pytest.fixture(scope="session")
 # instantiates ini file parses object
 def prep_properties():
     config_reader = ConfigParser("property.ini")
     return config_reader
 
+#initialize the page objects
 @pytest.fixture
 def pages():
     home_page = HomePage(driver)
@@ -32,7 +32,8 @@ def pages():
     forgot_page = ForgotPage(driver)
     return locals()
 
-@pytest.fixture(autouse=True)
+#setup of driver
+@pytest.fixture(scope="class")
 def setup(prep_properties,request):
     global driver,base_url,browsername
     base_url = prep_properties.config_section_dict("AUT")["base_url"]
@@ -57,7 +58,7 @@ def setup(prep_properties,request):
     driver.quit()
 
 
-
+#creating report
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item):
 
@@ -78,6 +79,7 @@ def pytest_runtest_makereport(item):
                 extra.append(pytest_html.extras.image(file_name))
         report.extra = extra
 
+#saving file 
 def _capture_screenshot(name):
         driver.get_screenshot_as_file(name)
 

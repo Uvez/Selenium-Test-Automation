@@ -10,6 +10,7 @@ class ConfigParser:
         self.file_path = os.path.join(dir_global.INI_CONFIGS_PATH, ini_file)
         self.config.read(self.file_path)
 
+    #reading your property file
     def config_section_dict(self, section):
         section_dict = {}
         section_keys = self.config.options(section)
